@@ -1,0 +1,64 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Base body styling */
+body {
+    position: relative;
+    overflow-x: hidden;
+    margin: 0; /* To prevent body margin affecting the navbar */
+}
+
+/* Full-screen menu */
+#full-screen-menu {
+    transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+    transform: translateX(100%); /* Start off-screen to the right */
+    opacity: 0;
+    visibility: hidden; /* Hidden initially */
+}
+
+/* Menu when active */
+#full-screen-menu.show {
+    transform: translateX(0); /* Move to on-screen */
+    opacity: 1;
+    visibility: visible; /* Ensure visibility is set to visible */
+}
+
+/* Transition when menu closes */
+#full-screen-menu.close {
+    transform: translateX(100%); /* Move to off-screen to the right */
+    opacity: 0;
+    visibility: hidden; /* Ensure visibility is hidden */
+}
+
+/* Navbar styling */
+nav {
+    position: fixed; /* Fixes navbar to the top of the viewport */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    z-index: 50; /* Ensure it stays above other content */
+    background-color: white; /* Optional: ensure navbar background is solid */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: add shadow for better visibility */
+    transition: background-color 0.3s ease; /* Optional: add transition for background color if needed */
+}
+
+/* Hamburger icon lines */
+#hamburger-icon path {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform-origin: center; /* Ensure transformation originates from the center */
+}
+
+/* Hamburger to X transition */
+#nav-toggle.open #line1 {
+    transform: rotate(45deg) translateY(6px); /* Adjust translateY for proper alignment */
+}
+
+#nav-toggle.open #line2 {
+    opacity: 0;
+}
+
+#nav-toggle.open #line3 {
+    transform: rotate(-45deg) translateY(-6px); /* Adjust translateY for proper alignment */
+}
+

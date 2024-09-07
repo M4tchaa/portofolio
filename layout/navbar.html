@@ -1,0 +1,30 @@
+<body class="bg-gray-100">
+    <nav class="bg-white shadow-md relative">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <a href="#" class="text-xl font-bold text-blue-500">Brand</a>
+
+                <!-- Hamburger Button for Mobile and Desktop -->
+                <button id="nav-toggle" class="focus:outline-none z-50" onclick="toggleMenu()">
+                    <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path id="line1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16"></path>
+                        <path id="line2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 12h16"></path>
+                        <path id="line3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Full-Screen Menu -->
+    <div id="full-screen-menu" class="fixed inset-0 bg-white z-40 flex items-center justify-center invisible opacity-0 transition-transform transform translate-x-full">
+        <div class="text-center">
+            <a href="#" class="text-3xl block mb-4 text-gray-700 hover:text-blue-500">Home</a>
+            <a href="#" class="text-3xl block mb-4 text-gray-700 hover:text-blue-500">About</a>
+            <a href="#" class="text-3xl block mb-4 text-gray-700 hover:text-blue-500">Services</a>
+            <a href="#" class="text-3xl block text-gray-700 hover:text-blue-500">Contact</a>
+        </div>
+    </div>
+
+    
